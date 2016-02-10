@@ -23,6 +23,10 @@ class PokemonDetailVC: UIViewController {
     @IBOutlet weak var nextEvoImg: UIImageView!
     @IBOutlet weak var evoLbl: UILabel!
     
+    
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var mainStackView: UIStackView!
+    
 
     
     var pokemon: Pokemon!
@@ -32,13 +36,16 @@ class PokemonDetailVC: UIViewController {
         
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
         nameLabel.text = pokemon.name
         let img = UIImage(named: "\(pokemon.pokedexId)")
         mainImg.image = img
-        currentEvoImg.image = img
         
         pokemon.downloadPokemonDetails { () -> () in
             // this will be called after donwload is done
@@ -63,10 +70,12 @@ class PokemonDetailVC: UIViewController {
         else{
             currentEvoImg.hidden = false
             nextEvoImg.hidden = false
+            currentEvoImg.image = UIImage(named: "\(pokemon.pokedexId)")
             nextEvoImg.image = UIImage(named: pokemon.nextEvolutionId)
             var str = "Next Evolution \(pokemon.nextEvoTxt)"
             if pokemon.nextEvolutionLevel != "" {  // For those which envolve by level up
                 str += " - LVL \(pokemon.nextEvolutionLevel)"
+                evoLbl.text = str
             }
         }
     }
@@ -75,6 +84,19 @@ class PokemonDetailVC: UIViewController {
     
     @IBAction func backButtonPressed(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    @IBAction func segmentControlPressed(sender: AnyObject) {
+        switch segmentedControl.selectedSegmentIndex
+        {
+        case 0:
+            mainStackView.hidden = false
+        case 1:
+            mainStackView.hidden = true
+        default:
+            break; 
+        }
     }
 
 

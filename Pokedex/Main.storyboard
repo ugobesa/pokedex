@@ -224,38 +224,41 @@
                                     <constraint firstItem="d8k-vg-JHs" firstAttribute="centerY" secondItem="9fR-Am-gXo" secondAttribute="centerY" id="m68-rO-d8m"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="cds-aK-Mb5">
-                                <rect key="frame" x="20" y="75" width="560" height="359"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XF4-Cj-4t9">
+                                <rect key="frame" x="20" y="85" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="vHL-Qu-wXg"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Bio"/>
+                                    <segment title="Moves"/>
+                                </segments>
+                                <color key="tintColor" red="0.84271244570000003" green="0.10895409759999999" blue="0.10835523179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentControlPressed:" destination="gXT-8A-UFO" eventType="valueChanged" id="op5-TL-Lsj"/>
+                                </connections>
+                            </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="cds-aK-Mb5">
+                                <rect key="frame" x="20" y="75" width="560" height="310"/>
                                 <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XF4-Cj-4t9">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="29" id="vHL-Qu-wXg"/>
-                                        </constraints>
-                                        <segments>
-                                            <segment title="Bio"/>
-                                            <segment title="Moves"/>
-                                        </segments>
-                                        <color key="tintColor" red="0.84271244570000003" green="0.10895409759999999" blue="0.10835523179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    </segmentedControl>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="p5a-s0-grW">
-                                        <rect key="frame" x="0.0" y="44" width="560" height="315"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="p5a-s0-grW">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="310"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xFM-vi-V5b">
-                                                <rect key="frame" x="0.0" y="0.0" width="560" height="224"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xFM-vi-V5b">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="219"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ICR-N5-cx1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="560" height="187"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ICR-N5-cx1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="560" height="182"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="VFa-Mf-qi8">
-                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="187"/>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="VFa-Mf-qi8">
+                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="182"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="120" id="3Kr-b7-fnP"/>
                                                                     <constraint firstAttribute="width" constant="120" id="N1m-vC-ENd"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="gTW-DL-2oV">
-                                                                <rect key="frame" x="120" y="0.0" width="440" height="187"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="gTW-DL-2oV">
+                                                                <rect key="frame" x="130" y="0.0" width="430" height="182"/>
                                                                 <string key="text">Lugia est un Pokémon volant blanc. Son aspect général fait penser à un Lugia est un Pokémon volant blanc. Son aspect général fait penser à un Lugia est un Pokémon volant blanc. Son aspect général fait penser à un </string>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -263,8 +266,8 @@
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Ghd-Qk-AbD">
-                                                        <rect key="frame" x="0.0" y="192" width="560" height="32"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Ghd-Qk-AbD">
+                                                        <rect key="frame" x="0.0" y="187" width="560" height="32"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9s2-IN-xlt">
                                                                 <rect key="frame" x="0.0" y="0.0" width="148" height="32"/>
@@ -297,8 +300,8 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KUD-QK-hrf">
-                                                <rect key="frame" x="0.0" y="244" width="560" height="71"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KUD-QK-hrf">
+                                                <rect key="frame" x="0.0" y="239" width="560" height="71"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOb-2L-qi1">
                                                         <rect key="frame" x="0.0" y="0.0" width="560" height="1"/>
@@ -389,7 +392,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqz-7s-3RR">
                                 <rect key="frame" x="0.0" y="454" width="600" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Evolution: Venusaur Lvl 32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQr-VE-ju2">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQr-VE-ju2">
                                         <rect key="frame" x="0.0" y="4" width="600" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="6xw-hQ-quo"/>
@@ -410,7 +413,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3wQ-Xf-qXP">
                                 <rect key="frame" x="20" y="492" width="560" height="100"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="cCA-23-ovt">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cCA-23-ovt">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="WtQ-7B-PQh"/>
@@ -429,12 +432,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="XF4-Cj-4t9" firstAttribute="leading" secondItem="ePu-dt-PV1" secondAttribute="leadingMargin" id="4UP-0s-bap"/>
+                            <constraint firstItem="cds-aK-Mb5" firstAttribute="top" secondItem="9fR-Am-gXo" secondAttribute="bottom" constant="20" id="DM3-4i-aM3"/>
                             <constraint firstItem="9fR-Am-gXo" firstAttribute="top" secondItem="ePu-dt-PV1" secondAttribute="top" id="Dfh-Ur-2ZG"/>
                             <constraint firstItem="cds-aK-Mb5" firstAttribute="leading" secondItem="ePu-dt-PV1" secondAttribute="leadingMargin" id="FAM-8s-5TZ"/>
                             <constraint firstAttribute="trailing" secondItem="iqz-7s-3RR" secondAttribute="trailing" id="JLD-vb-k7u"/>
                             <constraint firstItem="9fR-Am-gXo" firstAttribute="leading" secondItem="ePu-dt-PV1" secondAttribute="leading" id="TNA-6l-Aae"/>
                             <constraint firstItem="cds-aK-Mb5" firstAttribute="top" secondItem="9fR-Am-gXo" secondAttribute="bottom" constant="20" id="VN9-dl-92Q"/>
                             <constraint firstItem="iqz-7s-3RR" firstAttribute="leading" secondItem="ePu-dt-PV1" secondAttribute="leading" id="VNb-qL-ACu"/>
+                            <constraint firstItem="XF4-Cj-4t9" firstAttribute="trailing" secondItem="ePu-dt-PV1" secondAttribute="trailingMargin" id="Voq-vH-fTt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3wQ-Xf-qXP" secondAttribute="trailing" id="Xqr-1G-obj"/>
                             <constraint firstItem="fos-IP-5gJ" firstAttribute="top" secondItem="3wQ-Xf-qXP" secondAttribute="bottom" constant="8" id="abl-QQ-uxH"/>
                             <constraint firstItem="3wQ-Xf-qXP" firstAttribute="leading" secondItem="ePu-dt-PV1" secondAttribute="leadingMargin" id="cnS-eU-OqY"/>
@@ -442,7 +448,15 @@
                             <constraint firstItem="3wQ-Xf-qXP" firstAttribute="top" secondItem="iqz-7s-3RR" secondAttribute="bottom" constant="8" id="oV4-I5-GSU"/>
                             <constraint firstItem="iqz-7s-3RR" firstAttribute="top" secondItem="cds-aK-Mb5" secondAttribute="bottom" constant="20" id="rHf-1v-UHK"/>
                             <constraint firstAttribute="trailing" secondItem="9fR-Am-gXo" secondAttribute="trailing" id="reW-BN-irN"/>
+                            <constraint firstItem="cds-aK-Mb5" firstAttribute="top" secondItem="XF4-Cj-4t9" secondAttribute="bottom" constant="10" id="vgU-pQ-GEj"/>
+                            <constraint firstItem="XF4-Cj-4t9" firstAttribute="top" secondItem="9fR-Am-gXo" secondAttribute="bottom" constant="30" id="yxv-iN-bUX"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="DM3-4i-aM3"/>
+                                <exclude reference="VN9-dl-92Q"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="attackLbl" destination="Eme-rG-e7s" id="bFM-d2-jwi"/>
@@ -452,20 +466,21 @@
                         <outlet property="evoLbl" destination="aQr-VE-ju2" id="251-jg-rgl"/>
                         <outlet property="heightLbl" destination="S7Q-ZG-90N" id="rvV-ko-35b"/>
                         <outlet property="mainImg" destination="VFa-Mf-qi8" id="czd-iQ-Lbj"/>
+                        <outlet property="mainStackView" destination="cds-aK-Mb5" id="OZr-Am-NxB"/>
                         <outlet property="nameLabel" destination="Dbf-82-y2S" id="nk5-cY-r7L"/>
                         <outlet property="nextEvoImg" destination="2HB-He-19c" id="K7b-Nf-GcG"/>
                         <outlet property="pokedexLbl" destination="kf5-hQ-TUj" id="tKH-Fo-4uo"/>
+                        <outlet property="segmentedControl" destination="XF4-Cj-4t9" id="PtV-Ho-Khd"/>
                         <outlet property="typeLbl" destination="ZVC-qL-Vlr" id="cCr-hp-ySv"/>
                         <outlet property="weightLbl" destination="Cea-Wx-HK5" id="FSm-x8-qQW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tss-tf-Znl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1035" y="317"/>
+            <point key="canvasLocation" x="1076" y="338"/>
         </scene>
     </scenes>
     <resources>
-        <image name="4" width="120" height="120"/>
         <image name="5" width="120" height="120"/>
         <image name="65" width="120" height="120"/>
         <image name="back" width="64" height="64"/>
